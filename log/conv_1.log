@@ -1,0 +1,72 @@
+output_trans: 17.902000
+input_trans: 2.242000
+gemm: 2.344000
+output_trans: 17.893999
+ACL latency: 49.906109 ms
+GFlops: 3.474690 
+
+Test passed
+output_trans: 17.895000
+input_trans: 23.917999
+gemm: 18.011000
+output_trans: 17.896000
+ACL latency: 123.851692 ms
+GFlops: 29.869404 
+
+Test passed
+output_trans: 10.988000
+input_trans: 5.739000
+gemm: 9.905000
+output_trans: 11.002000
+ACL latency: 44.001888 ms
+GFlops: 42.036560 
+
+Test passed
+output_trans: 10.989000
+input_trans: 14.803000
+gemm: 19.577999
+output_trans: 10.997000
+ACL latency: 70.722443 ms
+GFlops: 52.308376 
+
+Test passed
+output_trans: 6.360000
+input_trans: 3.749000
+gemm: 9.875977
+output_trans: 6.354000
+ACL latency: 27.505272 ms
+GFlops: 67.248497 
+
+Test passed
+output_trans: 6.350000
+input_trans: 7.854000
+gemm: 20.056999
+output_trans: 6.351000
+ACL latency: 45.252110 ms
+GFlops: 81.750359 
+
+Test passed
+output_trans: 7.149000
+input_trans: 5.781000
+gemm: 12.391000
+output_trans: 7.134000
+ACL latency: 30.586550 ms
+GFlops: 60.473904 
+
+Test passed
+output_trans: 7.229000
+input_trans: 12.629000
+gemm: 24.264000
+output_trans: 7.227000
+ACL latency: 53.210770 ms
+GFlops: 69.523071 
+
+Test passed
+output_trans: 1.547000
+input_trans: 3.105000
+gemm: 6.236000
+output_trans: 1.561000
+ACL latency: 13.568900 ms
+GFlops: 68.159103 
+
+Test passed

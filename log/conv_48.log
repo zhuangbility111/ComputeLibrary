@@ -1,0 +1,216 @@
+output_trans: 12.435000
+input_trans: 2.406000
+gemm: 11.062000
+output_trans: 12.661000
+ACL latency: 46.827770 ms
+GFlops: 3.703107 
+
+Test passed
+output_trans: 12.567000
+input_trans: 13.019000
+gemm: 11.364000
+output_trans: 12.581000
+ACL latency: 59.905499 ms
+GFlops: 61.753532 
+
+Test passed
+output_trans: 7.519000
+input_trans: 7.325000
+gemm: 11.135000
+output_trans: 7.523000
+ACL latency: 48.417271 ms
+GFlops: 38.203064 
+
+Test passed
+output_trans: 7.581000
+input_trans: 7.783000
+gemm: 11.307000
+output_trans: 7.510000
+ACL latency: 49.045841 ms
+GFlops: 75.426910 
+
+Test passed
+output_trans: 6.568000
+input_trans: 6.101000
+gemm: 11.116000
+output_trans: 6.753000
+ACL latency: 46.106758 ms
+GFlops: 40.117504 
+
+Test passed
+output_trans: 6.602000
+input_trans: 6.795000
+gemm: 11.345000
+output_trans: 6.610000
+ACL latency: 46.776718 ms
+GFlops: 79.085838 
+
+Test passed
+output_trans: 11.348000
+input_trans: 6.400000
+gemm: 11.159000
+output_trans: 11.334000
+ACL latency: 50.932529 ms
+GFlops: 36.316437 
+
+Test passed
+output_trans: 11.363000
+input_trans: 11.568000
+gemm: 11.417000
+output_trans: 11.362000
+ACL latency: 56.232941 ms
+GFlops: 65.786636 
+
+Test passed
+output_trans: 10.991000
+input_trans: 11.003000
+gemm: 11.154000
+output_trans: 10.989000
+ACL latency: 44.985142 ms
+GFlops: 20.558878 
+
+Test passed
+output_trans: 16.695000
+input_trans: 2.329000
+gemm: 10.967000
+output_trans: 13.346000
+ACL latency: 49.172062 ms
+GFlops: 3.526561 
+
+Test passed
+output_trans: 12.566000
+input_trans: 12.906000
+gemm: 11.408000
+output_trans: 12.524000
+ACL latency: 59.358368 ms
+GFlops: 62.322739 
+
+Test passed
+output_trans: 7.486000
+input_trans: 7.249000
+gemm: 11.174000
+output_trans: 7.658000
+ACL latency: 48.576801 ms
+GFlops: 38.077602 
+
+Test passed
+output_trans: 7.676000
+input_trans: 8.045000
+gemm: 11.381000
+output_trans: 7.605000
+ACL latency: 49.590450 ms
+GFlops: 74.598564 
+
+Test passed
+output_trans: 6.541000
+input_trans: 6.124000
+gemm: 11.127000
+output_trans: 6.811000
+ACL latency: 45.865200 ms
+GFlops: 40.328793 
+
+Test passed
+output_trans: 6.554000
+input_trans: 6.315002
+gemm: 11.361000
+output_trans: 6.556000
+ACL latency: 46.944481 ms
+GFlops: 78.803215 
+
+Test passed
+output_trans: 11.302000
+input_trans: 6.657000
+gemm: 11.176000
+output_trans: 11.293000
+ACL latency: 51.085087 ms
+GFlops: 36.207985 
+
+Test passed
+output_trans: 11.358000
+input_trans: 11.492000
+gemm: 11.424000
+output_trans: 11.370000
+ACL latency: 56.316727 ms
+GFlops: 65.688759 
+
+Test passed
+output_trans: 10.993000
+input_trans: 11.003000
+gemm: 11.083000
+output_trans: 11.008000
+ACL latency: 45.273800 ms
+GFlops: 20.427799 
+
+Test passed
+output_trans: 9.727000
+input_trans: 2.465000
+gemm: 11.084000
+output_trans: 10.388000
+ACL latency: 46.116821 ms
+GFlops: 3.760195 
+
+Test passed
+output_trans: 12.897000
+input_trans: 13.759000
+gemm: 11.400000
+output_trans: 12.936000
+ACL latency: 60.657833 ms
+GFlops: 60.987610 
+
+Test passed
+output_trans: 7.505000
+input_trans: 7.453000
+gemm: 11.167000
+output_trans: 7.519000
+ACL latency: 48.137253 ms
+GFlops: 38.425297 
+
+Test passed
+output_trans: 8.031000
+input_trans: 8.678000
+gemm: 11.364000
+output_trans: 8.042000
+ACL latency: 50.090012 ms
+GFlops: 73.854568 
+
+Test passed
+output_trans: 6.619000
+input_trans: 6.071000
+gemm: 11.131000
+output_trans: 6.616000
+ACL latency: 45.724762 ms
+GFlops: 40.452656 
+
+Test passed
+output_trans: 6.094000
+input_trans: 6.288000
+gemm: 11.365000
+output_trans: 6.126000
+ACL latency: 46.321201 ms
+GFlops: 79.863564 
+
+Test passed
+output_trans: 11.324000
+input_trans: 6.423000
+gemm: 11.175000
+output_trans: 11.313000
+ACL latency: 50.919952 ms
+GFlops: 36.325409 
+
+Test passed
+output_trans: 11.332000
+input_trans: 11.466000
+gemm: 11.374000
+output_trans: 11.351000
+ACL latency: 53.141422 ms
+GFlops: 69.613800 
+
+Test passed
+output_trans: 10.989000
+input_trans: 11.006000
+gemm: 11.170000
+output_trans: 10.993000
+ACL latency: 45.380051 ms
+GFlops: 20.379971 
+
+Test passed

@@ -38,6 +38,7 @@
 
 #include "src/core/NEON/kernels/convolution/common/utils.hpp"
 #include "src/core/NEON/kernels/convolution/winograd/winograd.hpp"
+#include "timer.h"
 
 namespace arm_compute
 {
@@ -615,26 +616,35 @@ void NEWinogradConvolutionLayer::configure(const ITensor *input, const ITensor *
 
 void NEWinogradConvolutionLayer::run()
 {
+    // printf("NEWinogradConvolutionLayer-----begin\n");
+    const DataLayout data_layout = _input->info()->data_layout();
+    // std::cout << data_layout << std::endl;
     prepare();
-
+    // printf("prepare\n");
     MemoryGroupResourceScope scope_mg(_memory_group);
 
-    if(_data_layout == DataLayout::NCHW)
+    if(data_layout == DataLayout::NCHW)
     {
         //Bring channels to the front as Winograd code expects the tensor to be in the format NHWC
         _permute_input.run();
     }
-
+    Timer input_trans;
     // Transform input tensor to the winograd domain
     NEScheduler::get().schedule(_transform_input_kernel.get(), Window::DimX);
-
+    float input_trans_latency = input_trans.getTime();
+    
+    Timer gemm;
     //Run 16 GEMMs in multiple threads, each kernel runs one or more GEMMs
     _gemm_function.run();
+    float gemm_latency = gemm.getTime();
 
+    Timer output_trans;
     // Transform output tensor to the spatial domain
     NEScheduler::get().schedule(_transform_output_kernel.get(), Window::DimX);
+    float output_trans_latency = output_trans.getTime();
+    // float gflops = M * N * K * 2 / latency * n_loops / 1000000;
 
-    if(_data_layout == DataLayout::NCHW)
+    if(data_layout == DataLayout::NCHW)
     {
         // Reorder the convoluted output to ACL's ordering NCHW
         _permute_output.run();
@@ -644,6 +654,11 @@ void NEWinogradConvolutionLayer::run()
     {
         _activationlayer_function.run();
     }
+
+    printf("input_trans: %.6f\n", input_trans_latency);
+    printf("gemm: %.6f\n", gemm_latency);
+    printf("output_trans: %.6f\n", output_trans_latency);
+
 }
 
 Status NEWinogradConvolutionLayer::validate(const ITensorInfo *input, const ITensorInfo *weights, const ITensorInfo *biases, const ITensorInfo *output, const PadStrideInfo &conv_info,
@@ -758,6 +773,7 @@ Status NEWinogradConvolutionLayer::validate(const ITensorInfo *input, const ITen
 
 void NEWinogradConvolutionLayer::prepare()
 {
+    // _is_prepared = false;
     if(!_is_prepared)
     {
         // Permute weights
@@ -767,7 +783,12 @@ void NEWinogradConvolutionLayer::prepare()
 
         // Transform weights
         _kernel_storage.allocator()->allocate();
+
+	Timer kernel_trans;
         NEScheduler::get().schedule(_transform_weights_kernel.get(), Window::DimX);
+	float kernel_trans_latency = kernel_trans.getTime();
+        printf("kernel_trans: %.6f\n", kernel_trans_latency);
+
         _weights_hwio.allocator()->free();
 
         _gemm_function.prepare();

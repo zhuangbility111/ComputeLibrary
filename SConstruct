@@ -159,6 +159,9 @@ env.Append(CPPDEFINES = ['_GLIBCXX_USE_NANOSLEEP'])
 
 default_cpp_compiler = 'g++' if env['os'] not in ['android', 'macos'] else 'clang++'
 default_c_compiler = 'gcc' if env['os'] not in ['android', 'macos'] else 'clang'
+# default_cpp_compiler = 'FCC'
+# default_c_compiler = 'fcc'
+
 cpp_compiler = os.environ.get('CXX', default_cpp_compiler)
 c_compiler = os.environ.get('CC', default_c_compiler)
 

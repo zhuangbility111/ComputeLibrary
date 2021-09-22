@@ -25,6 +25,8 @@
 #pragma once
 
 #include "arm_gemm.hpp"
+#include <stdexcept>
+#include <limits>
 
 #include <cstddef>
 
